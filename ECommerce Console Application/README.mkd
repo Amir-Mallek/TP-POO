@@ -101,3 +101,13 @@ Shows your profile and allows you to change username and password.
 ### Summary:
 
 The Menu Class is the heart of the application containing the majority of methods linking User class and Inventory the two other major classes, allowing seamless interaction using a simple user interface.
+
+### Notes:
+
+-	Application starts with the primary admin menu which gives the default credentials.
+-	Application starts with no users and products. An admin should add new products and new users should register.
+-	Additional features are: 
+  -	Product stock tracking and automatic alert system for the admin. 
+  -	tracking of pending orders and confirmation possibility.
+  - Profile, username and password Modification Menu.
+
