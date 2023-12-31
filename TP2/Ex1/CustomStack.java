@@ -1,31 +1,31 @@
 public class CustomStack {
-    private int capacity;
+    private final int capacity;
     private int size;
-    private int[] theStack;
+    private final int[] theStack;
 
     public CustomStack(int capacity) {
-        this.theStack = new int[capacity];
+        theStack = new int[capacity];
         this.capacity = capacity;
+        size = 0;
     }
 
-    public void addElement(int element) {
-        if (size == capacity) return;
+    public void addElement(int element) throws StackOverflowException {
+        if (size == capacity) throw new StackOverflowException();
         theStack[size] = element;
         size++;
     }
 
-    public void removeElement() {
-        if (size == 0) return;
+    public void removeElement() throws StackEmptyException {
+        if (size == 0) throw new StackEmptyException();
         size--;
     }
 
-    public int lastInStack() {
-        if (size == 0) return 0;
+    public int lastInStack() throws StackEmptyException {
+        if (size == 0) throw new StackEmptyException();
         return theStack[size-1];
     }
 
     public boolean stackIsEmpty() { return size == 0; }
 
     public boolean stackIsFull() { return size == capacity; }
-
 }

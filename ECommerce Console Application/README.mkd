@@ -1,0 +1,103 @@
+
+# E-Commerce Console Application
+
+### Abstract Product Class:
+
+- Contains basic product information:
+ id, name, manufacturer and unit price.
+- Contains abstract methods: description() and getCategory().
+- Contains toString() method to print basic information about a product.
+
+### FoodProducts Class subclass of Product:
+
+- Category number 1.
+- Contains additional information:
+ expiration date, weight, calories.
+
+### ClothingProducts Class subclass of Product:
+
+- Category number 2.
+- Contains additional information:
+ size, color, material.
+
+### ElectronicProducts Class subclass of Product:
+
+- Category number 3.
+- Contains additional information:
+ memory, capacity, clock speed.
+
+### Summary:
+
+The design of the Product Class and its categories makes the addition of new product categories easy as it's compatible with the Product Class and takes advantage of polymorphism in other Classes like Order Class and Customer Class.
+
+### User Class:
+
+- Contains Essential user information:
+ username as a unique identifier for the user, first name, last name, email and password.
+- Contains a method to verify password input.
+
+### Admin Class subclass of User:
+
+- Contains additional phone number.
+- Has access to the admin menu in the Menu Class.
+
+### Customer Class subclass of User:
+
+- Contains additional Orders list and a Shopping cart.
+- Has access to the customer menu in the Menu Class.
+- Can add to cart, remove from cart, modify cart contents and clear cart.
+- Can list delivered and pending orders and add orders.
+
+### Summary: 
+
+User Class is used for authentication and its subclasses allows for different menus for the different users allowing the user to explore the appropriate functions of the app.
+
+### Inventory Class:
+
+- Contains a list of all the products, a list of all the products quantities and the list of stock status of each product.
+- Its main function is the management of the Stock:
+
+Addition, removal, modification.
+
+- Has search feature either by a keyword or by price range and category.
+- Has automatic update system after purchase.
+- Has automatic alert system.
+### Summary
+The Inventory Class allows for the admin to manage all products easily. The utilization of Hash Maps in the inventory is for easier access, search and update for the information.
+
+### Menu Class:
+
+- Register Menu:
+
+Creation of new customer accounts with unique usernames.
+
+- Login Menu:
+
+Automatic identification of type of user and forwarding to the appropriate menu post authentication.
+
+- Profile Menu for Admin and Customer:
+
+Shows your profile and allows you to change username and password.
+
+- Admin Menu:
+  - Inventory Menu: add, remove and update products.
+  - Alerts Menu: view items low on stock.
+  - Orders Menu: view pending orders.
+- Customer Menu:
+  - Search Menu:
+    - Search by keyword.
+    - Filter search: by price range and/or category. Can be cleared.
+    - View a specific product: product description and option to add to cart.
+  - Shopping Cart Menu:
+    - View shopping cart.
+    - Remove items from shopping cart.
+    - Modify item quantities in shopping cart.
+    - Place order: contains Payment Menu and transaction verification;
+  - Orders Menu:
+    - View Pending orders.
+    - View delivered orders.
+    - Confirm Delivery of an order.
+
+### Summary:
+
+The Menu Class is the heart of the application containing the majority of methods linking User class and Inventory the two other major classes, allowing seamless interaction using a simple user interface.
