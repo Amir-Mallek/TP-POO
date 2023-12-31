@@ -104,10 +104,10 @@ The Menu Class is the heart of the application containing the majority of method
 
 ### Notes:
 
--	Application starts with the primary admin menu which gives the default credentials.
--	Application starts with no users and products. An admin should add new products and new users should register.
--	Additional features are: 
-  -	Product stock tracking and automatic alert system for the admin. 
-  -	tracking of pending orders and confirmation possibility.
-  - Profile, username and password Modification Menu.
+  -	Application starts with the primary admin menu which gives the default credentials.
+  -	Application starts with no users and products. An admin should add new products and new users should register.
+  -	Additional features are: 
+    -	Product stock tracking and automatic alert system for the admin. 
+    -	tracking of pending orders and confirmation possibility.
+    - Profile, username and password Modification Menu.
 
