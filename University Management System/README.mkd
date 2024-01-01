@@ -1,0 +1,55 @@
+# University Management System Documentation
+
+## Overview
+The University Management System is a console-based application designed to manage students, teachers, courses, clubs, and course schedules. The system provides functionalities for enrolling students in courses, assigning teachers to courses, and managing extracurricular activities through clubs. Additionally, it allows administrators to assign timetables for courses.
+
+## Classes
+
+### 1. **Person Class**
+   - Represents a person in the university.
+   - Attributes:
+     - `id`: Unique identifier for the person.
+     - `name`: Name of the person.
+     - `timeTable`: Timetable associated with the person.
+
+### 2. **Student Class**
+   - Represents a student in the university.
+   - Inherits from `Person`.
+   - Attributes:
+     - `courses`: List of courses enrolled by the student.
+     - `clubsJoined`: List of clubs joined by the student.
+
+### 3. **Teacher Class**
+   - Represents a teacher in the university.
+   - Inherits from `Person`.
+   - Attributes:
+     - `coursesTaught`: List of courses taught by the teacher.
+
+### 4. **Course Class**
+   - Represents a course offered in the university.
+   - Attributes:
+     - `courseCode`: Unique code for the course.
+     - `courseName`: Name of the course.
+     - `timeTable`: Timetable for the course.
+
+### 5. **Club Class**
+   - Represents a club or extracurricular activity in the university.
+   - Attributes:
+     - `name`: Name of the club.
+     - `description`: Brief description of the club.
+
+### 6. **Admin Class**
+   - Handles administrative tasks in the system.
+   - Methods:
+     - `assignTeacherCourse(Teacher teacher, Course course)`: Assigns a course to a teacher.
+     - `enrollStudentCourse(Student student, Course course)`: Enrolls a student in a course.
+     - `assignCourseTimeTable(Course course, int day, int hour)`: Assigns a timetable slot for a course.
+
+### 7. **TimeSheet Class**
+   - Manages timetables for courses and persons.
+   - Attributes:
+     - `timeSheet`: Timetable matrix for courses.
+
+### 8. **Main Class**
+   - Entry point for the application.
+   - Demonstrates the functionality of the system.
